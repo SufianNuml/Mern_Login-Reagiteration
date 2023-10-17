@@ -8,7 +8,8 @@ app.use(express.json());
 app.use(cors({
     origin: ["https://mern-login-reagiteration.vercel.app"],
     methods: ["POST", "GET],
-    credentials: true
+             credentials:true
+
 }));
 
 app.post("/login",async(req,resp)=>
