@@ -62,4 +62,6 @@ app.post("/check", (req,resp)=>
 })
 
 
-app.listen(5000);
+app.listen(5000,()=>{
+    console.log("server is running");
+});
