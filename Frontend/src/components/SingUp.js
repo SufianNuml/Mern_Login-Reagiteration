@@ -14,7 +14,7 @@ export default function SingUp() {
     {
         e.preventDefault();
         console.log(name,email,password);
-        axios.post("https://mern-login-reagiteration.vercel.app/login",{name,email,password})
+        axios.post("/login",{name,email,password})
         .then(result=> {console.log(result)
              navigate("/login")})
         .catch(err => console.log(err))
