@@ -11,7 +11,10 @@ app.use(cors({
      credentials: true
 
 }));
-
+app.get("/",(req,resp)=>
+    {
+        resp.json("hello");
+    }
 app.post("/login",async(req,resp)=>
 {
     let data=new test(req.body);
@@ -31,38 +34,22 @@ app.post("/check", (req,resp)=>
         if(user)
         {
             resp.send(user);
-            // if(user.password === password)
-            // {
-            //     resp.send(user);
-            // }
-            // else{
-            //     resp.send({user:"Incorrect Password"});
-            // }
+           
         }
         else{
             resp.send({user:"No record Exist"});
         }
     })
-    // if(req.body.email && req.body.password)
-    // {
-    //     let user=await test.findOne(req.body);
-    //     if(user)
-    //     {
-    //         resp.send(user);
-
-    //     }
-    //     else{
-    //         resp.send({result:"no user found"});
-    //     }
+   
     
-    // }
-    // else{
-    //     resp.send({result:"no user found"});
-    // }
 
 })
 
 
-app.listen(5000,()=>{
-    console.log("server is running");
+
+app.listen(5000 , ()=>
+{
+    console.log("good");
 });
+
+
