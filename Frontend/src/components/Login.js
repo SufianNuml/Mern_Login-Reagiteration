@@ -9,7 +9,7 @@ export default function Login() {
     {
         e.preventDefault();
         console.log(email,password);
-        let result= await fetch("http://localhost:5000/check",{
+        let result= await fetch("https://mern-login-reagiteration.vercel.app/check",{
             method:"Post",
             body:JSON.stringify({email,password}),
             headers:{
